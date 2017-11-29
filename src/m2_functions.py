@@ -34,6 +34,8 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
+    turtle5()
     turtle3()
     turtle2()
     turtle2()
@@ -103,9 +105,43 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    david = rg.SimpleTurtle()
+    david.pen = rg.Pen('SteelBlue', 3.5)
+    size = 60
+    for b in range(4):
+        david.draw_circle(size)
+        david.pen_up()
+        david.forward(5)
+        david.right(5)
+        david.forward(5)
+        david.right(5)
+        david.backward(5)
+        david.pen_down()
+        size = size-12
+
+
+def turtle5():
+    ethan = rg.SimpleTurtle('turtle')
+    ethan.pen = rg.Pen('SteelBlue2', 8)
+    ethan.speed = 500
+    graham = rg.SimpleTurtle()
+    graham.pen = rg.Pen('DarkKhaki', 5)
+    size = 80
+    for c in range(20):
+        ethan.draw_regular_polygon(20, 10)
+        ethan.pen_up()
+        ethan.right(10)
+        ethan.pen_down()
+    for a in range(7):
+        graham.draw_square(size)
+        graham.forward(10)
+        size = size-16
+
+
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -137,7 +173,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -167,7 +203,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -183,7 +219,7 @@ def turtle3():
 
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
